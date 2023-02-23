@@ -1,0 +1,24 @@
+//ass-2  Print n1 to n2 odd numbers except 3rd number in the range. 
+#include <stdio.h>
+
+int main() {
+    int n1, n2, i, count=0;
+
+    printf("Enter the starting number: ");
+    scanf("%d", &n1);
+    printf("Enter the ending number: ");
+    scanf("%d", &n2);
+
+    for(i=n1; i<=n2; i++) {
+        if(i%2 != 0) {  // check if i is odd
+            count++;
+            if(count != 3) {  // check if it's not the 3rd odd number
+                printf("%d ", i);
+            } else {
+                count = 0;  // reset count for the next iteration
+            }
+        }
+    }
+
+    return 0;
+}
